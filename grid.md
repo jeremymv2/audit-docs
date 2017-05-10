@@ -1,5 +1,133 @@
-| | Report Direct to Compliance | Report Direct to Automate | Report to Compliance via Chef Server | Report to Automate via Chef Server
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| <b>Fetch Direct From Compliance</b>  | <li>['audit']['reporter'] = 'chef-compliance'<li>['audit']['server'] = 'https://compliance-server.test/api'<li>['audit']['refresh_token' OR 'token'] = '..'<li>['audit']['owner'] = 'Owner/Org' | ['audit']['reporter'] = 'chef-automate'<li>['audit']['server'] = 'https://compliance-server.test/api'<li>['audit']['refresh_token' OR 'token'] = '..'<li>['audit']['owner'] = 'Owner/Org'<li>client.rb:<li>data_collector['server_url'] = 'https://automate-server.test/data-collector/v0/'<li>data_collector['token'] = '..' | ['audit']['reporter'] = 'chef-server-compliance'<li>['audit']['server'] = 'https://compliance-server.test/api'<li>['audit']['refresh_token' OR 'token'] = '..'<li>['audit']['owner'] = 'Owner/Org' | ['audit']['reporter'] = 'chef-server-automate'<li>['audit']['server'] = 'https://compliance-server.test/api'<li>['audit']['refresh_token' OR 'token'] = '..'<li>['audit']['owner'] = 'Owner/Org'<li>chef-server.rb:<li>data_collector['root_url'] = 'https://automate-server.test/data-collector/v0/'|
-| Fetch From Compliance via Chef Server | ['audit']['reporter'] = 'chef-compliance'<li>['audit']['fetcher'] = 'chef-server'<li>['audit']['server'] = 'https://compliance-server.test/api'<li>['audit']['refresh_token' OR 'token'] = '..'<li>['audit']['owner'] = 'Owner/Org'  | ['audit']['reporter'] = 'chef-automate'<li>['audit']['fetcher'] = 'chef-server'<li>['audit']['server'] = 'https://compliance-server.test/api'<li>['audit']['refresh_token' OR 'token'] = '..'<li>['audit']['owner'] = 'Owner/Org'<li>client.rb:<li>data_collector['server_url'] = 'https://automate-server.test/data-collector/v0/'<li>data_collector['token'] = '..' | ['audit']['reporter'] = 'chef-server-compliance'<li>['audit']['fetcher'] = 'chef-server'<li>Compliance Integrated w/ Chef Server | ['audit']['reporter'] = 'chef-server-automate'<li>['audit']['fetcher'] = 'chef-server'<li>Compliance Integrated w/ Chef Server<li>chef-server.rb:<li>data_collector['root_url'] = 'https://automate-server.test/data-collector/v0/' |
-| Fetch From Automate via Chef Server  | ['audit']['reporter'] = 'chef-compliance'<li>['audit']['fetcher'] = 'chef-server'<li>['audit']['server'] = 'https://compliance-server.test/api'<li>['audit']['refresh_token' OR 'token'] = '..'<li>['audit']['owner'] = 'Owner/Org' | ['audit']['reporter'] = 'chef-automate'<li>['audit']['fetcher'] = 'chef-server'<li>client.rb:<li>data_collector['server_url'] = 'https://automate-server.test/data-collector/v0/'<li>data_collector['token'] = '..' | ['audit']['reporter'] = 'chef-server-compliance'<li>['audit']['fetcher'] = 'chef-server'<li>Compliance Integrated w/ Chef Server<li>chef-server.rb:<li>profiles['root_url'] = 'https://automate-server.test' | ['audit']['reporter'] = 'chef-server-automate'<li>['audit']['fetcher'] = 'chef-server'<li>chef-server.rb:<li>data_collector['root_url'] = 'https://automate-server.test/data-collector/v0/'<li>profiles['root_url'] = 'https://automate-server.test' |
+<table>
+<tr>
+  <th>&nbsp;</th><th>Report Direct to Compliance</th><th>Report Direct to Automate</th><th>Report to Compliance via Chef Server</th><th>Report to Automate via Chef Server</th>
+</tr>
+<tr>
+  <th>Fetch Direct From Compliance</th>
+  <td>
+    <pre>
+    ['audit']['reporter'] = 'chef-compliance'
+    ['audit']['server'] = 'https://compliance-server.test/api'
+    ['audit']['refresh_token' OR 'token'] = '..'
+    ['audit']['owner'] = 'Owner/Org'
+    </pre>
+  </td>
+  <td>
+    <pre>
+    ['audit']['reporter'] = 'chef-automate'
+    ['audit']['server'] = 'https://compliance-server.test/api'
+    ['audit']['refresh_token' OR 'token'] = '..'\n['audit']['owner'] = 'Owner/Org'
+
+    client.rb:
+      data_collector['server_url'] = 'https://automate-server.test/data-collector/v0/'
+      data_collector['token'] = '..'
+    </pre>
+  </td>
+  <td>
+    <pre>
+    ['audit']['reporter'] = 'chef-server-compliance'
+    ['audit']['server'] = 'https://compliance-server.test/api'
+    ['audit']['refresh_token' OR 'token'] = '..'
+    ['audit']['owner'] = 'Owner/Org'
+    </pre>
+  </td>
+  <td>
+    <pre>
+    ['audit']['reporter'] = 'chef-server-automate'
+    ['audit']['server'] = 'https://compliance-server.test/api'
+    ['audit']['refresh_token' OR 'token'] = '..'
+    ['audit']['owner'] = 'Owner/Org'
+
+    chef-server.rb:
+      data_collector['root_url'] = 'https://automate-server.test/data-collector/v0/'
+    </pre>
+  </td>
+</tr>
+<tr>
+  <th>Fetch From Compliance via Chef Server</th>
+  <td>
+    <pre>
+    ['audit']['reporter'] = 'chef-compliance'
+    ['audit']['fetcher'] = 'chef-server'
+    ['audit']['server'] = 'https://compliance-server.test/api'
+    ['audit']['refresh_token' OR 'token'] = '..'
+    ['audit']['owner'] = 'Owner/Org'
+    </pre>
+  </td>
+  <td>
+    <pre>
+    ['audit']['reporter'] = 'chef-automate'
+    ['audit']['fetcher'] = 'chef-server'
+    ['audit']['server'] = 'https://compliance-server.test/api'
+    ['audit']['refresh_token' OR 'token'] = '..'
+    ['audit']['owner'] = 'Owner/Org'
+
+    client.rb:
+      data_collector['server_url'] = 'https://automate-server.test/data-collector/v0/'
+      data_collector['token'] = '..'
+    </pre>
+  </td>
+  <td>
+    <pre>
+    ['audit']['reporter'] = 'chef-server-compliance'
+    ['audit']['fetcher'] = 'chef-server'
+
+    Compliance Integrated w/ Chef Server
+    </pre>
+  </td>
+  <td>
+    <pre>
+    ['audit']['reporter'] = 'chef-server-automate'
+    ['audit']['fetcher'] = 'chef-server'
+
+    Compliance Integrated w/ Chef Server
+
+    chef-server.rb:
+      data_collector['root_url'] = 'https://automate-server.test/data-collector/v0/'</td>
+    </pre>
+  </td>
+</tr>
+<tr>
+  <th>Fetch From Automate via Chef Server</th>
+  <td>
+    <pre>
+    ['audit']['reporter'] = 'chef-compliance'
+    ['audit']['fetcher'] = 'chef-server'
+    ['audit']['server'] = 'https://compliance-server.test/api'
+    ['audit']['refresh_token' OR 'token'] = '..'
+    ['audit']['owner'] = 'Owner/Org'
+    </pre>
+  </td>
+  <td>
+    <pre>
+    ['audit']['reporter'] = 'chef-automate'
+    ['audit']['fetcher'] = 'chef-server'
+
+    client.rb:
+      data_collector['server_url'] = 'https://automate-server.test/data-collector/v0/'
+      data_collector['token'] = '..'
+    </pre>
+  </td>
+  <td>
+    <pre>
+    ['audit']['reporter'] = 'chef-server-compliance'
+    ['audit']['fetcher'] = 'chef-server'
+
+    Compliance Integrated w/ Chef Server
+
+    chef-server.rb:
+      profiles['root_url'] = 'https://automate-server.test'
+    </pre>
+  </td>
+  <td>
+    <pre>
+    ['audit']['reporter'] = 'chef-server-automate'
+    ['audit']['fetcher'] = 'chef-server'
+
+    chef-server.rb:
+      data_collector['root_url'] = 'https://automate-server.test/data-collector/v0/'
+      profiles['root_url'] = 'https://automate-server.test'
+    </pre>
+  </td>
+</tr>
+</table>
