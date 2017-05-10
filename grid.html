@@ -105,12 +105,18 @@
     ['audit']['server'] = 'https://compliance-server.test/api'
     ['audit']['refresh_token' OR 'token'] = '..'
     ['audit']['owner'] = 'Owner/Org'
+
+    chef-server.rb:
+      profiles['root_url'] = 'https://automate-server.test'
     </pre>
   </td>
   <td>
     <pre>
     ['audit']['reporter'] = 'chef-automate'
     ['audit']['fetcher'] = 'chef-server'
+
+    chef-server.rb:
+      profiles['root_url'] = 'https://automate-server.test'
 
     client.rb:
       data_collector['server_url'] = 'https://automate-server.test/data-collector/v0/'
