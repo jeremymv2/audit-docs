@@ -13,7 +13,7 @@
     </pre>
   </td>
   <td>
-    <pre>
+    ```ruby
     ['audit']['reporter'] = 'chef-automate'
     ['audit']['server'] = 'https://compliance-server.test/api'
     ['audit']['refresh_token' OR 'token'] = '..'\n['audit']['owner'] = 'Owner/Org'
@@ -21,7 +21,7 @@
     client.rb:
       data_collector['server_url'] = 'https://automate-server.test/data-collector/v0/'
       data_collector['token'] = '..'
-    </pre>
+    ```
   </td>
   <td>
     <pre>
