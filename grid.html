@@ -1,4 +1,13 @@
-<table>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<table class="table table-bordered table-hover table-condensed">
 <tr>
   <th>&nbsp;</th><th>Report Direct to Compliance</th><th>Report Direct to Automate</th><th>Report to Compliance via Chef Server</th><th>Report to Automate via Chef Server</th>
 </tr>
@@ -13,7 +22,7 @@
     </pre>
   </td>
   <td>
-    ```ruby
+    <pre>
     ['audit']['reporter'] = 'chef-automate'
     ['audit']['server'] = 'https://compliance-server.test/api'
     ['audit']['refresh_token' OR 'token'] = '..'\n['audit']['owner'] = 'Owner/Org'
@@ -21,7 +30,7 @@
     client.rb:
       data_collector['server_url'] = 'https://automate-server.test/data-collector/v0/'
       data_collector['token'] = '..'
-    ```
+    </pre>
   </td>
   <td>
     <pre>
@@ -131,3 +140,4 @@
   </td>
 </tr>
 </table>
+</html>
