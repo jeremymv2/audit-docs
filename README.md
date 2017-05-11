@@ -1,4 +1,4 @@
-# Audit Cookbook v3.1.0 Office Hour
+# Chef Audit Cookbook v3.1.0 Office Hour
 
 ## Deprecation Warnings
 In order to make the audit cookbook easier to understand and consume, we have changed an important attribute
