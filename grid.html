@@ -13,7 +13,7 @@
 </tr>
 <tr>
   <th>Fetch Direct From Compliance</th>
-  <td>
+  <td> <!-- Fetch Directly from Compliance : Report Directly to Compliance -->
     <pre>
     ['audit']['reporter'] = 'chef-compliance'
     ['audit']['server'] = 'https://compliance-server.test/api'
@@ -21,7 +21,7 @@
     ['audit']['owner'] = 'Owner/Org'
     </pre>
   </td>
-  <td>
+  <td> <!-- Fetch Directly from Compliance : Report Directly to Automate -->
     <pre>
     ['audit']['reporter'] = 'chef-automate'
     ['audit']['server'] = 'https://compliance-server.test/api'
@@ -33,7 +33,7 @@
       data_collector['token'] = '..'
     </pre>
   </td>
-  <td>
+  <td> <!-- Fetch Directly from Compliance : Report to Compliance via Chef Server -->
     <pre>
     ['audit']['reporter'] = 'chef-server-compliance'
     ['audit']['server'] = 'https://compliance-server.test/api'
@@ -41,7 +41,7 @@
     ['audit']['owner'] = 'Owner/Org'
     </pre>
   </td>
-  <td>
+  <td> <!-- Fetch Directly from Compliance : Report to Automate via Chef Server -->
     <pre>
     ['audit']['reporter'] = 'chef-server-automate'
     ['audit']['server'] = 'https://compliance-server.test/api'
@@ -55,7 +55,7 @@
 </tr>
 <tr>
   <th>Fetch From Compliance via Chef Server</th>
-  <td>
+  <td> <!-- Fetch from Compliance via Chef Server : Report Directly to Compliance -->
     <pre>
     ['audit']['reporter'] = 'chef-compliance'
     ['audit']['fetcher'] = 'chef-server'
@@ -66,7 +66,7 @@
     Compliance Integrated w/ Chef Server
     </pre>
   </td>
-  <td>
+  <td> <!-- Fetch from Compliance via Chef Server : Report Directly to Automate -->
     <pre>
     ['audit']['reporter'] = 'chef-automate'
     ['audit']['fetcher'] = 'chef-server'
@@ -81,7 +81,7 @@
       data_collector['token'] = '..'
     </pre>
   </td>
-  <td>
+  <td> <!-- Fetch from Compliance via Chef Server : Report to Compliance via Chef Server -->
     <pre>
     ['audit']['reporter'] = 'chef-server-compliance'
     ['audit']['fetcher'] = 'chef-server'
@@ -89,7 +89,7 @@
     Compliance Integrated w/ Chef Server
     </pre>
   </td>
-  <td>
+  <td> <!-- Fetch from Compliance via Chef Server : Report to Automate via Chef Server -->
     <pre>
     ['audit']['reporter'] = 'chef-server-automate'
     ['audit']['fetcher'] = 'chef-server'
@@ -103,7 +103,7 @@
 </tr>
 <tr>
   <th>Fetch From Automate via Chef Server</th>
-  <td>
+  <td> <!-- Fetch From Automate via Chef Server : Report Directly to Compliance -->
     <pre>
     ['audit']['reporter'] = 'chef-compliance'
     ['audit']['fetcher'] = 'chef-server'
@@ -113,9 +113,12 @@
 
     chef-server.rb:
       profiles['root_url'] = 'https://automate-server.test'
+
+    delivery.rb:
+      compliance_profiles["enable"] = true
     </pre>
   </td>
-  <td>
+  <td> <!-- Fetch From Automate via Chef Server : Report Directly to Automate -->
     <pre>
     ['audit']['reporter'] = 'chef-automate'
     ['audit']['fetcher'] = 'chef-server'
@@ -126,9 +129,12 @@
     client.rb:
       data_collector['server_url'] = 'https://automate-server.test/data-collector/v0/'
       data_collector['token'] = '..'
+
+    delivery.rb:
+      compliance_profiles["enable"] = true
     </pre>
   </td>
-  <td>
+  <td> <!-- Fetch From Automate via Chef Server : Report to Compliance via Chef Server -->
     <pre>
     ['audit']['reporter'] = 'chef-server-compliance'
     ['audit']['fetcher'] = 'chef-server'
@@ -137,9 +143,12 @@
 
     chef-server.rb:
       profiles['root_url'] = 'https://automate-server.test'
+
+    delivery.rb:
+      compliance_profiles["enable"] = true
     </pre>
   </td>
-  <td>
+  <td> <!-- Fetch From Automate via Chef Server : Report to Automate via Chef Server -->
     <pre>
     ['audit']['reporter'] = 'chef-server-automate'
     ['audit']['fetcher'] = 'chef-server'
@@ -147,6 +156,9 @@
     chef-server.rb:
       data_collector['root_url'] = 'https://automate-server.test/data-collector/v0/'
       profiles['root_url'] = 'https://automate-server.test'
+
+    delivery.rb:
+      compliance_profiles["enable"] = true
     </pre>
   </td>
 </tr>
