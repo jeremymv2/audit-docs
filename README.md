@@ -59,3 +59,5 @@ To support all of the above scenarios, configuration can be required in up to 3 
 
 To understand exactly which settings to configure for any particular scenario I have created
 this [cheat sheet](http://htmlpreview.github.io/?https://github.com/jeremymv2/audit-docs/blob/master/grid.html)
+
+Reference: [compliance office hour](https://jeremymv2.github.io/compliance_demo_officehour/)
