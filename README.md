@@ -16,10 +16,11 @@ You may either pass `['audit']['reporter']` a string value for a single destinat
 multiple destinations.
 
 Possible values for `['audit']['reporter']`:
- - chef-compliance
- - chef-automate (Note: If you were using `chef-visibilty` in the past, you must switch to this)
- - chef-server-compliance
- - chef-server-automate (Note: If you were using `chef-server-visibilty` in the past, you must switch to this)
+ - chef-compliance = report directly to Compliance Server
+ - chef-automate = report directory to Automate (Note: If you were using `chef-visibilty` in the past, you must switch to this)
+ - chef-server-compliance = report to Compliance Server via Chef Server
+ - chef-server-automate = report to Automate via Chef Server (Note: If you were using `chef-server-visibilty` in the past, you must switch to this)
+ - json-file = report to local file on filesystem in json format
 
 ## Supported Scenarios
 
