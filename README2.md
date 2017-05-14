@@ -41,8 +41,8 @@ The support for values `chef-server-visibility` and `chef-visibility` will be re
 ### Component Architecture
 ```
  ┌──────────────────────┐    ┌──────────────────────┐    ┌─────────────────────┐
- │     Chef Client      │    │     Chef Server      │    │   Chef Compliance   │
- │                      │    │                      │    │   or Chef Automate  │
+ │     Chef Client      │    │   Chef Server Proxy  │    │   Chef Compliance   │
+ │                      │    │      (optional)      │    │   or Chef Automate  │
  │ ┌──────────────────┐ │    │                      │    │                     │
  │ │                  │◀┼────┼──────────────────────┼────│  Profiles           │
  │ │  audit cookbook  │ │    │                      │    │                     │
@@ -52,21 +52,21 @@ The support for values `chef-server-visibility` and `chef-visibility` will be re
  └──────────────────────┘    └──────────────────────┘    └─────────────────────┘
 ```
 
-Profiles may also be hosted from a variety of other locations:
+Inspec Profiles can be hosted from a variety of locations:
 ```
  ┌──────────────────────┐                                ┌─────────────────────┐
  │     Chef Client      │     ┌───────────────────────┐  │   Chef Compliance   │
  │                      │  ┌──│ Profiles(Supermarket, │  │   or Chef Automate  │
  │ ┌──────────────────┐ │  │  │ Github, local, etc)   │  │                     │
  │ │                  │◀┼──┘  └───────────────────────┘  │                     │
- │ │  audit cookbook  │ │                                │                     │
+ │ │  audit cookbook  │◀┼────────────────────────────────│  Profiles           │
  │ │                  │─┼───────────────────────────────▶│  Reports            │
  │ └──────────────────┘ │                                │                     │
  │                      │                                │                     │
  └──────────────────────┘                                └─────────────────────┘
 ```
 
-## All Supported Architectures
+## Supported Configurations
 <table>
 <tr>
   <th>Fetch Directly From Compliance</th>
