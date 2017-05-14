@@ -50,6 +50,7 @@ data_collector['root_url'] = 'https://automate-server.test/data-collector/v0/'
 ['audit']['owner'] = 'User/Org'
 &#35;
 &#35; NOTE: Must have Compliance Integrated w/ Chef Server
+&#35;
 </code></pre>
 <p><b>Report Directly to Automate</b>
 <pre lang="ruby"><code>
@@ -64,6 +65,7 @@ data_collector['server_url'] = 'https://automate-server.test/data-collector/v0/'
 data_collector['token'] = '..'
 &#35;
 &#35; NOTE: Must have Compliance Integrated w/ Chef Server
+&#35;
 </code></pre>
 <p><b>Report to Compliance via Chef Server</b>
 <pre lang="ruby"><code>
@@ -71,6 +73,7 @@ data_collector['token'] = '..'
 ['audit']['fetcher'] = 'chef-server'
 &#35;
 &#35; NOTE: Must have Compliance Integrated w/ Chef Server
+&#35;
 </code></pre>
 <p><b>Report to Automate via Chef Server</b>
 <pre lang="ruby"><code>
@@ -81,6 +84,7 @@ data_collector['token'] = '..'
 data_collector['root_url'] = 'https://automate-server.test/data-collector/v0/'</td>
 &#35;
 &#35; NOTE: Must have Compliance Integrated w/ Chef Server
+&#35;
 </code></pre>
   </td>
 </tr>
@@ -127,6 +131,7 @@ profiles['root_url'] = 'https://automate-server.test'
 compliance_profiles["enable"] = true
 &#35;
 &#35; NOTE: Must have Compliance Integrated w/ Chef Server
+&#35;
 </code></pre>
 <p><b>Report to Automate via Chef Server</b>
 <pre lang="ruby"><code>
