@@ -1,4 +1,5 @@
 <table>
+<tr><th colspan=2>Configuration Requirements</th></tr>
 <tr>
   <th>Fetch Directly From Compliance</th>
   <td><b>Report Directly to Compliance</b>
