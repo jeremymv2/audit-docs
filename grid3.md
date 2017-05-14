@@ -14,8 +14,7 @@
 ['audit']['server'] = 'https://compliance-server.test/api'
 ['audit']['refresh_token' OR 'token'] = '..'
 ['audit']['owner'] = 'User/Org'
-
-&#35; client.rb:
+<p>&#35; client.rb:
 data_collector['server_url'] = 'https://automate-server.test/data-collector/v0/'
 data_collector['token'] = '..'
 </code></pre>
