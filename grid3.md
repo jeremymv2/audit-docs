@@ -9,16 +9,16 @@
 ['audit']['owner'] = 'User/Org'
 </pre>
 <p><b>Report Directly to Automate</b>
-<pre lang="ruby">
+<pre lang="ruby"><code>
 ['audit']['reporter'] = 'chef-automate'
 ['audit']['server'] = 'https://compliance-server.test/api'
 ['audit']['refresh_token' OR 'token'] = '..'
 ['audit']['owner'] = 'User/Org'
 
-# client.rb:
+## client.rb:
 data_collector['server_url'] = 'https://automate-server.test/data-collector/v0/'
 data_collector['token'] = '..'
-</pre>
+</code></pre>
 <p><b>Report to Compliance via Chef Server</b>
 <pre lang="ruby">
 ['audit']['reporter'] = 'chef-server-compliance'
