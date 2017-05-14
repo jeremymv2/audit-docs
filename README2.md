@@ -38,7 +38,7 @@ The support for values `chef-server-visibility` and `chef-visibility` will be re
 
 ## Overview
 
-### Architecture
+### Component Architecture
 ```
  ┌──────────────────────┐    ┌──────────────────────┐    ┌─────────────────────┐
  │     Chef Client      │    │     Chef Server      │    │   Chef Compliance   │
@@ -66,11 +66,8 @@ Profiles may also be hosted from a variety of other locations:
  └──────────────────────┘                                └─────────────────────┘
 ```
 
-The audit cookbook balances flexibility with simplicity however, a variety of
-additional architecture scenarios are possible as shown below:
-
+## All Supported Architectures
 <table>
-<tr><th colspan=2>Configuration Requirements for All Supported Architecture Scenarios</th></tr>
 <tr>
   <th>Fetch Directly From Compliance</th>
   <td><b>Report Directly to Compliance</b>
