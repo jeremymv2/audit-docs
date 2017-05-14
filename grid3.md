@@ -2,40 +2,40 @@
 <tr>
   <th>Fetch Directly From Compliance</th>
   <td><b>Report Directly to Compliance</b>
-    <pre lang="ruby">
-    ['audit']['reporter'] = 'chef-compliance'
-    ['audit']['server'] = 'https://compliance-server.test/api'
-    ['audit']['refresh_token' OR 'token'] = '..'
-    ['audit']['owner'] = 'User/Org'
-    </pre>
-    <p><b>Report Directly to Automate</b>
-    <pre lang="ruby">
-    ['audit']['reporter'] = 'chef-automate'
-    ['audit']['server'] = 'https://compliance-server.test/api'
-    ['audit']['refresh_token' OR 'token'] = '..'
-    ['audit']['owner'] = 'User/Org'
+<pre lang="ruby">
+['audit']['reporter'] = 'chef-compliance'
+['audit']['server'] = 'https://compliance-server.test/api'
+['audit']['refresh_token' OR 'token'] = '..'
+['audit']['owner'] = 'User/Org'
+</pre>
+<p><b>Report Directly to Automate</b>
+<pre lang="ruby">
+['audit']['reporter'] = 'chef-automate'
+['audit']['server'] = 'https://compliance-server.test/api'
+['audit']['refresh_token' OR 'token'] = '..'
+['audit']['owner'] = 'User/Org'
 
-    client.rb:
-      data_collector['server_url'] = 'https://automate-server.test/data-collector/v0/'
-      data_collector['token'] = '..'
-    </pre>
-    <p><b>Report to Compliance via Chef Server</b>
-    <pre lang="ruby">
-    ['audit']['reporter'] = 'chef-server-compliance'
-    ['audit']['server'] = 'https://compliance-server.test/api'
-    ['audit']['refresh_token' OR 'token'] = '..'
-    ['audit']['owner'] = 'User/Org'
-    </pre>
-    <p><b>Report to Automate via Chef Server</b>
-    <pre lang="ruby">
-    ['audit']['reporter'] = 'chef-server-automate'
-    ['audit']['server'] = 'https://compliance-server.test/api'
-    ['audit']['refresh_token' OR 'token'] = '..'
-    ['audit']['owner'] = 'User/Org'
+# client.rb:
+data_collector['server_url'] = 'https://automate-server.test/data-collector/v0/'
+data_collector['token'] = '..'
+</pre>
+<p><b>Report to Compliance via Chef Server</b>
+<pre lang="ruby">
+['audit']['reporter'] = 'chef-server-compliance'
+['audit']['server'] = 'https://compliance-server.test/api'
+['audit']['refresh_token' OR 'token'] = '..'
+['audit']['owner'] = 'User/Org'
+</pre>
+<p><b>Report to Automate via Chef Server</b>
+<pre lang="ruby">
+['audit']['reporter'] = 'chef-server-automate'
+['audit']['server'] = 'https://compliance-server.test/api'
+['audit']['refresh_token' OR 'token'] = '..'
+['audit']['owner'] = 'User/Org'
 
-    chef-server.rb:
-      data_collector['root_url'] = 'https://automate-server.test/data-collector/v0/'
-    </pre>
+# chef-server.rb:
+data_collector['root_url'] = 'https://automate-server.test/data-collector/v0/'
+</pre>
   </td>
 </tr>
 <tr>
