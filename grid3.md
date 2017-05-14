@@ -2,14 +2,14 @@
 <tr>
   <th>Fetch Directly From Compliance</th>
   <td><b>Report Directly to Compliance</b>
-    <pre>
+    <pre lang="ruby">
     ['audit']['reporter'] = 'chef-compliance'
     ['audit']['server'] = 'https://compliance-server.test/api'
     ['audit']['refresh_token' OR 'token'] = '..'
     ['audit']['owner'] = 'User/Org'
     </pre>
     <p><b>Report Directly to Automate</b>
-    <pre>
+    <pre lang="ruby">
     ['audit']['reporter'] = 'chef-automate'
     ['audit']['server'] = 'https://compliance-server.test/api'
     ['audit']['refresh_token' OR 'token'] = '..'
@@ -20,14 +20,14 @@
       data_collector['token'] = '..'
     </pre>
     <p><b>Report to Compliance via Chef Server</b>
-    <pre>
+    <pre lang="ruby">
     ['audit']['reporter'] = 'chef-server-compliance'
     ['audit']['server'] = 'https://compliance-server.test/api'
     ['audit']['refresh_token' OR 'token'] = '..'
     ['audit']['owner'] = 'User/Org'
     </pre>
     <p><b>Report to Automate via Chef Server</b>
-    <pre>
+    <pre lang="ruby">
     ['audit']['reporter'] = 'chef-server-automate'
     ['audit']['server'] = 'https://compliance-server.test/api'
     ['audit']['refresh_token' OR 'token'] = '..'
@@ -41,7 +41,7 @@
 <tr>
   <th>Fetch From Compliance via Chef Server</th>
   <td><b>Report Directly to Compliance</b>
-    <pre>
+    <pre lang="ruby">
     ['audit']['reporter'] = 'chef-compliance'
     ['audit']['fetcher'] = 'chef-server'
     ['audit']['server'] = 'https://compliance-server.test/api'
@@ -51,7 +51,7 @@
     Compliance Integrated w/ Chef Server
     </pre>
     <p><b>Report Directly to Automate</b>
-    <pre>
+    <pre lang="ruby">
     ['audit']['reporter'] = 'chef-automate'
     ['audit']['fetcher'] = 'chef-server'
     ['audit']['server'] = 'https://compliance-server.test/api'
@@ -65,14 +65,14 @@
       data_collector['token'] = '..'
     </pre>
     <p><b>Report to Compliance via Chef Server</b>
-    <pre>
+    <pre lang="ruby">
     ['audit']['reporter'] = 'chef-server-compliance'
     ['audit']['fetcher'] = 'chef-server'
 
     Compliance Integrated w/ Chef Server
     </pre>
     <p><b>Report to Automate via Chef Server</b>
-    <pre>
+    <pre lang="ruby">
     ['audit']['reporter'] = 'chef-server-automate'
     ['audit']['fetcher'] = 'chef-server'
 
@@ -86,7 +86,7 @@
 <tr>
   <th>Fetch From Automate via Chef Server</th>
   <td><b>Report Directly to Compliance</b>
-    <pre>
+    <pre lang="ruby">
     ['audit']['reporter'] = 'chef-compliance'
     ['audit']['fetcher'] = 'chef-server'
     ['audit']['server'] = 'https://compliance-server.test/api'
@@ -100,7 +100,7 @@
       compliance_profiles["enable"] = true
     </pre>
     <p><b>Report Directly to Automate</b>
-    <pre>
+    <pre lang="ruby">
     ['audit']['reporter'] = 'chef-automate'
     ['audit']['fetcher'] = 'chef-server'
 
@@ -115,7 +115,7 @@
       compliance_profiles["enable"] = true
     </pre>
     <p><b>Report to Compliance via Chef Server</b>
-    <pre>
+    <pre lang="ruby">
     ['audit']['reporter'] = 'chef-server-compliance'
     ['audit']['fetcher'] = 'chef-server'
 
@@ -128,7 +128,7 @@
       compliance_profiles["enable"] = true
     </pre>
     <p><b>Report to Automate via Chef Server</b>
-    <pre>
+    <pre lang="ruby">
     ['audit']['reporter'] = 'chef-server-automate'
     ['audit']['fetcher'] = 'chef-server'
 
